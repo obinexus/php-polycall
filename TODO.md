@@ -1,10 +1,13 @@
-# TODO — php-polycall (PHP)
+# TODO — php-polycall
 
-Status: ✅ implemented reference adapter for libpolycall 1.5.0.
+Status: implemented PHP FFI source adapter for libpolycall 1.5.
 
-- [x] Thin adapter mapping PHP idioms to the FFI boundary
-- [x] `php-polycallrc` on the shared schema
-- [x] Example / CLI entry point
-- [x] Smoke test
-- [ ] Publish to the PHP package ecosystem (post-1.5.0)
-- [ ] Full end-to-end run verified in CI (needs PHP toolchain + shared core)
+- [x] One-call binding to `polycall_ffi_run_config(path, 1)`
+- [x] Raw-status and `PolycallException` APIs
+- [x] Explicit environment/library discovery
+- [x] npm public-package metadata and relative directory index
+- [x] Composer PSR-4 metadata, updated README, and MIT license
+- [x] Generated mock-library PHP FFI smoke test
+- [ ] Install PHP with `ext-ffi` and execute `npm run test:php` locally
+- [ ] Run an end-to-end example against a built libpolycall shared core
+- [ ] Publish `@obinexusltd/php-polycall` publicly on npm

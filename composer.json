@@ -1,0 +1,21 @@
+{
+  "name": "obinexus/php-polycall",
+  "description": "PHP FFI source binding for libpolycall 1.5",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nnamdi Michael Okpala",
+      "email": "okpalan@protonmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-ffi": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "OBINexus\\Polycall\\": "src/"
+    }
+  }
+}
