@@ -17,6 +17,28 @@ if (phpProbe.error || phpProbe.status !== 0) {
   process.exit(0);
 }
 
+const ffiProbe = spawnSync(
+  'php',
+  [
+    '-d',
+    'ffi.enable=1',
+    '-r',
+    'exit(extension_loaded("ffi") && class_exists("FFI", false) ? 0 : 2);'
+  ],
+  { stdio: 'ignore' }
+);
+
+if (ffiProbe.error || ffiProbe.status !== 0) {
+  if (required) {
+    console.error(
+      'PHP ext-ffi is required for this command but is not loaded; enable the FFI extension in php.ini'
+    );
+    process.exit(1);
+  }
+  console.log('PHP ext-ffi is not loaded; skipping PHP FFI smoke test');
+  process.exit(0);
+}
+
 const buildDirectory = path.join(root, 'build');
 fs.mkdirSync(buildDirectory, { recursive: true });
 

@@ -91,9 +91,9 @@ Tests validate npm/Composer metadata, relative directory indexing, and the
 one-call FFI boundary. If PHP is installed, the suite compiles a tiny mock
 shared library with GCC and exercises the real PHP FFI path automatically.
 
-PHP is not installed on the current machine, so that optional smoke test is
+If PHP is absent or `ext-ffi` is not loaded, that optional smoke test is
 reported as skipped while the mandatory publication tests still run. Once PHP
-is available, require the language test explicitly with:
+and FFI are available, require the language test explicitly with:
 
 ```powershell
 npm run test:php

@@ -8,6 +8,6 @@ Status: implemented PHP FFI source adapter for libpolycall 1.5.
 - [x] npm public-package metadata and relative directory index
 - [x] Composer PSR-4 metadata, updated README, and MIT license
 - [x] Generated mock-library PHP FFI smoke test
-- [ ] Install PHP with `ext-ffi` and execute `npm run test:php` locally
+- [ ] Enable PHP `ext-ffi` and execute `npm run test:php` locally
 - [ ] Run an end-to-end example against a built libpolycall shared core
 - [ ] Publish `@obinexusltd/php-polycall` publicly on npm
